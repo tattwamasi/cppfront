@@ -1,5 +1,5 @@
 
-//  Copyright 2022-2024 Herb Sutter
+//  Copyright 2022-2025 Herb Sutter
 //  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 //
 //  Part of the Cppfront Project, under the Apache License v2.0 with LLVM
@@ -505,8 +505,7 @@ auto contains(std::string const &s, auto const &value) -> bool {
 template <typename T>
   requires std::is_integral_v<T> // Note: `std::integral` concept not yet
                                  // available in Apple Clang
-                                 auto print_with_thousands(T val)
-                                     -> std::string {
+auto print_with_thousands(T val) -> std::string {
   auto ret = std::to_string(val % 10);
   auto pos = 0;
   while ((val /= 10) > 0) {
@@ -804,7 +803,7 @@ public:
 #include "build.info"
     );
     print("\nSPDX-License-Identifier  Apache-2.0 WITH LLVM-exception");
-    print("\nCopyright (c) 2022-2024  Herb Sutter\n");
+    print("\nCopyright (c) 2022-2025  Herb Sutter\n");
   }
 
 } cmdline;
